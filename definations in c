@@ -1,2 +1,74 @@
-What is Array in C?
-An array in C is a fixed-size collection of similar data items stored in contiguous memory locations. It can be used to store the collection of primitive data types such as int, char, float, etc.
+#What is Array in C?
+An Array is a group of similar types of elements. It has a contiguous memory location. It makes the code optimized, easy to traverse and easy to sort. The size and type of arrays cannot be changed after its declaration.
+# What is C language?
+C is a mid-level and procedural programming language. The Procedural programming language is also known as the structured programming language is a technique in which large programs are broken down into smaller modules, and each module uses structured code
+#When was C language developed?
+C language was developed in 1972 at bell laboratories of AT&T by Danish Ritche.
+#WHAT IS STATIC VARIABLE ?
+A variable which is declared as static is known as a static variable. The static variable retains its value between multiple function calls.
+EXAMPLE:    #include<stdio.h>
+int main()
+{
+	func();
+	func();
+	return 0;
+}
+void func()
+{
+	int a=10;
+	static b=20;
+	a++;
+	b++;
+	printf("%d\n",a);
+	printf("%d\n",b);
+}
+#What is the use of the function in C?
+C functions are used to avoid the rewriting the same code again and again in our program.
+C functions can be called any number of times from any place of our program.
+C functions provide the reusability concept, i.e., it breaks the big task into smaller tasks so that it makes the C program more understandable.
+#WHAT IS CALL BY VALUE ?
+When a copy of the value is passed to the function, then the original value is not modified.
+EXAMPLE:
+#include<stdio.h>
+void swap (int a, int b);
+int main()
+{
+	int a,b;
+	printf("entre two number a & b :");
+	scanf("%d %d",&a,&b);
+	swap(a,b);
+	printf("main function a=%d b=%d",a,b);
+	return 0;
+}                                                                                  AFTER SWAPPING
+void swap (int a, int b)                          OUTPUT IS :SUPPOSE WE GIVE INPUT A=12, & B=21  MAIN VALUE 
+{                                                                                  A=21, & B=12   CALLING VALUE
+	int temp;
+	temp=a;
+	a=b;
+	b=temp;
+	printf("calling function a=%d b=%d",a,b);
+	
+}  
+# CALL BY REFERENCE:
+When a copy of the value is passed to the function, then the original value is modified.
+EXAMPLE:
+#include<stdio.h>
+void swap (int *p, int *q);
+int main()
+{
+	int a=100,b=200;
+	swap(&a,&b);
+	printf("a=%d b=%d",a,b);
+	return 0;
+}
+void swap (int *p, int *q)
+{
+	int temp;
+	temp=*p;                                        OUTPUT IS :      P=200, & Q=100
+	*p=*q;                                                           A=200, & B=100
+	*q=temp;
+	printf("calling function p=%d q=%d",*p,*q);
+	
+}
+#WHAT IS POINTER IN C?
+ variables that hold the address of another variable this is called pointer variable.
