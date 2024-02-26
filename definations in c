@@ -17,8 +17,8 @@ void func()
 {
 	int a=10;
 	static b=20;
-	a++;
-	b++;
+	a++;                                                          OUTPUT IS:        IN 1ST TIME RUN A=11, B=21
+	b++;                                                                            IN SECOND TIME RUN A=11, B=22
 	printf("%d\n",a);
 	printf("%d\n",b);
 }
@@ -72,3 +72,58 @@ void swap (int *p, int *q)
 }
 #WHAT IS POINTER IN C?
  variables that hold the address of another variable this is called pointer variable.
+#What is dangling pointer in C?
+If a pointer is pointing any memory location, but meanwhile another pointer deletes the memory occupied by the first pointer while the first pointer still points to that memory location, the first pointer will be known as a dangling pointer. This problem is known as a dangling pointer problem.
+ #What is pointer to pointer in C?
+In case of a pointer to pointer concept, one pointer refers to the address of another pointer. The pointer to pointer is a chain of pointers. Generally, the pointer contains the address of a variable. The pointer to pointer contains the address of a first pointer. Let's understand this concept through an example:
+
+#include <stdio.h>  
+ int main()  
+{  
+    int a=10;  
+    int *ptr,**pptr; // *ptr is a pointer and **pptr is a double pointer.  
+    ptr=&a;  
+    pptr=&ptr;  
+    printf("value of a is:%d",a);  
+    printf("\n");  
+    printf("value of *ptr is : %d",*ptr);  
+    printf("\n");  
+    printf("value of **pptr is : %d",**pptr);  
+    return 0;  
+}  
+#What is static memory allocation?
+In case of static memory allocation, memory is allocated at compile time, and memory can't be increased while executing the program. It is used in the array
+The static memory is faster than dynamic memory.
+EXAMPLE     
+         For example:  
+         int a[10];  
+#What is dynamic memory allocation?
+In case of dynamic memory allocation, memory is allocated at runtime and memory can be increased while executing the program. It is used in the linked list.
+The malloc() or calloc() function is required to allocate the memory at the runtime.
+EXAMPLE      
+       For example  
+                 int *p= malloc(sizeof(int)*10); 
+#What functions are used for dynamic memory allocation in C language?
+#malloc()
+The malloc() function is used to allocate the memory during the execution of the program.
+It does not initialize the memory but carries the garbage value.
+It returns a null pointer if it could not be able to allocate the requested space.
+Syntax
+
+ptr = (cast-type*) malloc(byte-size) // allocating the memory using malloc() function.  
+calloc()
+#The calloc() is same as malloc() function, but the difference only is that it initializes the memory with zero value.
+Syntax
+
+ptr = (cast-type*)calloc(n, element-size);// allocating the memory using calloc() function.  
+#DIFFERENCE BETWEEN MALLOC() AND CALLOC()
+CALLOC():It initialise the content of the memory with zero.
+MALLOC(): It does not initialise the content of the memory, So it carries the garbage value.
+#What is a token?
+The Token is an identifier. It can be constant, keyword, string literal, etc. A token is the smallest individual unit in a program. C has the following tokens:
+
+Identifiers: Identifiers refer to the name of the variables.
+Keywords: Keywords are the predefined words that are explained by the compiler.
+Constants: Constants are the fixed values that cannot be changed during the execution of a program.
+Operators: An operator is a symbol that performs the particular operation.
+Special characters: All the characters except alphabets and digits are treated as special characters.
