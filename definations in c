@@ -127,3 +127,4 @@ Keywords: Keywords are the predefined words that are explained by the compiler.
 Constants: Constants are the fixed values that cannot be changed during the execution of a program.
 Operators: An operator is a symbol that performs the particular operation.
 Special characters: All the characters except alphabets and digits are treated as special characters.
+Strings: Strings in C are an array of characters that end with a null character (‘\0). Null character indicates the end of the string; 
