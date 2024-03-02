@@ -1,0 +1,13 @@
+#FACTORIAL OF A GIVEN NUMBER:
+#include<stdio.h>
+int main()
+{
+	int num,count,fact;
+	printf("entre the value of num:");
+	scanf("%d",&num);
+	for(count=1;count<=num;count++){
+		fact = fact*count;
+	}
+	printf("%d",fact);
+	return 0;
+}
