@@ -129,6 +129,7 @@ Operators: An operator is a symbol that performs the particular operation.
 Special characters: All the characters except alphabets and digits are treated as special characters.
 Strings: Strings in C are an array of characters that end with a null character (‘\0). Null character indicates the end of the string; 
 # STRING FUNCTIONS:
+-scanf(): can't input multiwords string with space,so we have to use gets,puts and fgets instead of scanf():
 -gets(str):input a string even multiwords.
 -puts(str):output a string.
 -fgets(str,n,file):stop when n-1 char input or new line is entre
