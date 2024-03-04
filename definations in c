@@ -133,3 +133,4 @@ Strings: Strings in C are an array of characters that end with a null character 
 -gets(str):input a string even multiwords.
 -puts(str):output a string.
 -fgets(str,n,file):stop when n-1 char input or new line is entre
+string-array-pointers, so these all three are can work as a pointer 
