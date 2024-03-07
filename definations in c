@@ -1,5 +1,5 @@
 #What is Array in C?
-An Array is a group of similar types of elements. It has a contiguous memory location. It makes the code optimized, easy to traverse and easy to sort. The size and type of arrays cannot be changed after its declaration.
+An Array is a group of similar types of DATA elements. It has a contiguous memory location. It makes the code optimized, easy to traverse and easy to sort. The size and type of arrays cannot be changed after its declaration.
 # What is C language?
 C is a mid-level and procedural programming language. The Procedural programming language is also known as the structured programming language is a technique in which large programs are broken down into smaller modules, and each module uses structured code
 #When was C language developed?
@@ -22,7 +22,7 @@ void func()
 	printf("%d\n",a);
 	printf("%d\n",b);
 }
-#What is the use of the function in C?
+#What is the use of the function in C?   
 C functions are used to avoid the rewriting the same code again and again in our program.
 C functions can be called any number of times from any place of our program.
 C functions provide the reusability concept, i.e., it breaks the big task into smaller tasks so that it makes the C program more understandable.
@@ -97,8 +97,7 @@ The static memory is faster than dynamic memory.
 EXAMPLE     
          For example:  
          int a[10];  
-#What is dynamic memory allocation?
-In case of dynamic memory allocation, memory is allocated at runtime and memory can be increased while executing the program. It is used in the linked list.
+#In case of dynamic memory allocation, memory is allocated at runtime and memory can be increased while executing the program. It is used in the linked list.
 The malloc() or calloc() function is required to allocate the memory at the runtime.
 EXAMPLE      
        For example  
@@ -110,12 +109,89 @@ It does not initialize the memory but carries the garbage value.
 It returns a null pointer if it could not be able to allocate the requested space.
 Syntax
 
-ptr = (cast-type*) malloc(byte-size) // allocating the memory using malloc() function.  
+ptr = (cast-type*) malloc(byte-size) // allocating the memory using malloc() function.
+All the values are allocated are initialized to garbage value.
+EXAMPLE #include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	// use of malloc
+	int *ptr;
+	int n;
+	printf("enter the size of array you want to create");
+	scanf("%d",&n);
+	ptr = (int *) malloc( n* sizeof(int));
+	for(int i=0;i<n;i++){
+		printf("enter the value no %d of this array\n",i);
+		scanf("%d",&ptr[i]);
+	}
+	for(int i=0;i<n;i++){
+	printf("the value at %d of this array %d\n",i,ptr[i]);
+	}
+	return 0;
+}
+OUTPUT
+enter the size of array you want to create5
+enter the value no 0 of this array
+12
+enter the value no 1 of this array
+34
+enter the value no 2 of this array
+56
+enter the value no 3 of this array
+78
+enter the value no 4 of this array
+90
+the value at 0 of this array 12
+the value at 1 of this array 34
+the value at 2 of this array 56
+the value at 3 of this array 78
+the value at 4 of this array 90
+
 calloc()
 #The calloc() is same as malloc() function, but the difference only is that it initializes the memory with zero value.
 Syntax
 
 ptr = (cast-type*)calloc(n, element-size);// allocating the memory using calloc() function.  
+EXAMPLE 
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	// use of Calloc
+	int *ptr;
+	int n;
+	printf("enter the size of array you want to create");
+	scanf("%d",&n);
+	ptr = (int *) calloc( n,sizeof(int));
+	for(int i=0;i<n;i++){
+		printf("enter the value no %d of this array\n",i);
+		scanf("%d",&ptr[i]);
+	}
+	for(int i=0;i<n;i++){
+	printf("the value at %d of this array %d\n",i,ptr[i]);
+	}
+	return 0;
+}
+OUTPUT  
+/tmp/PaCY8sPRIB.o
+enter the size of array you want to create5
+enter the value no 0 of this array
+1
+enter the value no 1 of this array
+2
+enter the value no 2 of this array
+3
+enter the value no 3 of this array
+4
+enter the value no 4 of this array
+5
+the value at 0 of this array 1
+the value at 1 of this array 2
+the value at 2 of this array 3
+the value at 3 of this array 4
+the value at 4 of this array 5
+
 #DIFFERENCE BETWEEN MALLOC() AND CALLOC()
 CALLOC():It initialise the content of the memory with zero.
 MALLOC(): It does not initialise the content of the memory, So it carries the garbage value.
