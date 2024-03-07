@@ -202,6 +202,18 @@ Identifiers: Identifiers refer to the name of the variables.
 Keywords: Keywords are the predefined words that are explained by the compiler.
 Constants: Constants are the fixed values that cannot be changed during the execution of a program.
 Operators: An operator is a symbol that performs the particular operation.
+Logical AND (&&):
+
+The logical AND operator returns true (1) if both operands are true, otherwise, it returns false (0).
+Example: if (x > 0 && y < 10) evaluates to true if x is greater than 0 and y is less than 10.
+Logical OR (||):
+
+The logical OR operator returns true (1) if at least one of the operands is true, otherwise, it returns false (0).
+Example: if (x == 0 || y == 0) evaluates to true if either x or y is equal to 0.
+Logical NOT (!):
+
+The logical NOT operator reverses the logical state of its operand. If the operand is true, it returns false (0), and if the operand is false, it returns true (1).
+Example: if (!flag) evaluates to true if flag is false.
 Special characters: All the characters except alphabets and digits are treated as special characters.
 Strings: Strings in C are an array of characters that end with a null character (‘\0). Null character indicates the end of the string; 
 # STRING FUNCTIONS:
