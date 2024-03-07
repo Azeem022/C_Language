@@ -145,3 +145,93 @@ Output:
 
 Word' fox' found at index: 16
 
+#malloc()
+The malloc() function is used to allocate the memory during the execution of the program.
+It does not initialize the memory but carries the garbage value.
+It returns a null pointer if it could not be able to allocate the requested space.
+Syntax
+
+ptr = (cast-type*) malloc(byte-size) // allocating the memory using malloc() function.
+All the values are allocated are initialized to garbage value.
+EXAMPLE #include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	// use of malloc
+	int *ptr;
+	int n;
+	printf("enter the size of array you want to create");
+	scanf("%d",&n);
+	ptr = (int *) malloc( n* sizeof(int));
+	for(int i=0;i<n;i++){
+		printf("enter the value no %d of this array\n",i);
+		scanf("%d",&ptr[i]);
+	}
+	for(int i=0;i<n;i++){
+	printf("the value at %d of this array %d\n",i,ptr[i]);
+	}
+	return 0;
+}
+OUTPUT
+enter the size of array you want to create5
+enter the value no 0 of this array
+12
+enter the value no 1 of this array
+34
+enter the value no 2 of this array
+56
+enter the value no 3 of this array
+78
+enter the value no 4 of this array
+90
+the value at 0 of this array 12
+the value at 1 of this array 34
+the value at 2 of this array 56
+the value at 3 of this array 78
+the value at 4 of this array 90
+
+calloc()
+#The calloc() is same as malloc() function, but the difference only is that it initializes the memory with zero value.
+Syntax
+
+ptr = (cast-type*)calloc(n, element-size);// allocating the memory using calloc() function.  
+EXAMPLE 
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	// use of Calloc
+	int *ptr;
+	int n;
+	printf("enter the size of array you want to create");
+	scanf("%d",&n);
+	ptr = (int *) calloc( n,sizeof(int));
+	for(int i=0;i<n;i++){
+		printf("enter the value no %d of this array\n",i);
+		scanf("%d",&ptr[i]);
+	}
+	for(int i=0;i<n;i++){
+	printf("the value at %d of this array %d\n",i,ptr[i]);
+	}
+	return 0;
+}
+OUTPUT  
+/tmp/PaCY8sPRIB.o
+enter the size of array you want to create5
+enter the value no 0 of this array
+1
+enter the value no 1 of this array
+2
+enter the value no 2 of this array
+3
+enter the value no 3 of this array
+4
+enter the value no 4 of this array
+5
+the value at 0 of this array 1
+the value at 1 of this array 2
+the value at 2 of this array 3
+the value at 3 of this array 4
+the value at 4 of this array 5
+
+
