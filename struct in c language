@@ -1,7 +1,7 @@
 # TO PRINT THE STUDENT NAME,ROLLNO & CGPA
    #include<stdio.h>
 #include<string.h>
-   //iser define
+   //User define(DECLARATION OF STUDENT DETAIL )
     struct student
 	{
 		int rollNo;
@@ -10,7 +10,7 @@
 	};   
 int main()
 {
-    struct student s1;
+    struct student s1;    // MAKE A VARIABLE 
     s1.rollNo = 672087;
     s1.cgpa = 8.9;
     strcpy(s1.name,"Mohd Azeem");
