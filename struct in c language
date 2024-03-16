@@ -1,25 +1,40 @@
 # TO PRINT THE STUDENT NAME,ROLLNO & CGPA
-   #include<stdio.h>
+#include<stdio.h>
 #include<string.h>
-   //User define(DECLARATION OF STUDENT DETAIL )
-    struct student
-	{
-		int rollNo;
+    struct student {
+		int rollno;
 		float cgpa;
-		char name[100]; 
-	};   
+		char name[100];
+	};
 int main()
 {
-    struct student s1;    // MAKE A VARIABLE 
-    s1.rollNo = 672087;
-    s1.cgpa = 8.9;
-    strcpy(s1.name,"Mohd Azeem");
-    printf("student name %s\n",s1.name);
-    printf("student ROllNo %d\n",s1.rollNo);
-    printf("student cgpa %f\n",s1.cgpa);
+	struct student s1;
+	s1.rollno = 12;
+	s1.cgpa = 9.9;
+	strcpy(s1.name,"mohd azeem");
+	printf("student name = %s\n",s1.name);
+	printf("student cgpa=%f\n",s1.cgpa);
+	printf("student roll no.=%d\n",s1.rollno); 
+	struct student s2;
+	s2.rollno = 32;
+	s2.cgpa = 9.7;
+	strcpy(s2.name,"mohd kasim");
+	printf("student name=%s\n",s2.name);
+	printf("student cgpa = %f\n",s2.cgpa);
+	printf("student rollno = %d\n",s2.rollno);
+	struct student s3;
+	s3.rollno = 16;
+	s3.cgpa = 9.5;
+	strcpy(s3.name,"mohd kaif");
+	printf("student name = %s\n",s3.name);
+	printf("student cgpa = %f\n",s3.cgpa);
+	printf("student rollno = %d\n",s3.rollno);
+	struct student s4;
+	s4.rollno = 24;
+	s4.cgpa = 9.3;
+	strcpy(s4.name,"mohd shazaib");
+	printf("student name = %s\n",s4.name);
+	printf("student rollno = %d\n",s4.rollno);
+	printf("student cgpa = %f\n",s4.cgpa);
 	return 0;
 }
-OUTPUT   
-student name Mohd Azeem
-student ROllNo 672087
-student cgpa 8.900000
