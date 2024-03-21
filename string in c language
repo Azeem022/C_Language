@@ -102,11 +102,11 @@ Output
 Enter string: javatpoint
 String is: javatpoint
 Upper String is: JAVATPOINT
-# Strstr() function in C:
+################# Strstr() function in C:
   #include <stdio.h>  
 #include <string.h>  
   
-intmain() {  
+int main() {  
 char str[100] = "this is javatpoint with c and java";  
 char *sub;  
   
