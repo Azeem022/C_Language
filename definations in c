@@ -106,7 +106,7 @@ The malloc() or calloc() function is required to allocate the memory at the runt
 EXAMPLE      
        For example  
                  int *p= malloc(sizeof(int)*10); 
-#What functions are used for dynamic memory allocation in C language?
+#What functions are used for dynamic memory allocation in C language?                                   ######  YAHA SE PDHNA H AB 
 #malloc()
 The malloc() function is used to allocate the memory during the execution of the program.
 It does not initialize the memory but carries the garbage value.
