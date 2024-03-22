@@ -1,7 +1,9 @@
 #What is Array in C?
-An Array is a group of similar types of DATA elements. It has a contiguous memory location. It makes the code optimized, easy to traverse and easy to sort. The size and type of arrays cannot be changed after its declaration.
+An Array is a group of similar types of DATA elements. It has a contiguous memory location. It makes the code optimized, easy to traverse and easy to sort.
+The size and type of arrays cannot be changed after its declaration.
 # What is C language?
-C is a mid-level and procedural programming language. The Procedural programming language is also known as the structured programming language is a technique in which large programs are broken down into smaller modules, and each module uses structured code
+C is a mid-level and procedural programming language. The Procedural programming language is also known as the structured programming language is a technique in which 
+large programs are broken down into smaller modules, and each module uses structured code
 #When was C language developed?
 C language was developed in 1972 at bell laboratories of AT&T by Danish Ritche.
 #WHAT IS STATIC VARIABLE ?
@@ -73,9 +75,11 @@ void swap (int *p, int *q)
 #WHAT IS POINTER IN C?
  variables that hold the address of another variable this is called pointer variable.
 #What is dangling pointer in C?
-If a pointer is pointing any memory location, but meanwhile another pointer deletes the memory occupied by the first pointer while the first pointer still points to that memory location, the first pointer will be known as a dangling pointer. This problem is known as a dangling pointer problem.
+If a pointer is pointing any memory location, but meanwhile another pointer deletes the memory occupied by the first pointer while the first pointer still points to that memory location,
+the first pointer will be known as a dangling pointer. This problem is known as a dangling pointer problem.
  #What is pointer to pointer in C?
-In case of a pointer to pointer concept, one pointer refers to the address of another pointer. The pointer to pointer is a chain of pointers. Generally, the pointer contains the address of a variable. The pointer to pointer contains the address of a first pointer. Let's understand this concept through an example:
+In case of a pointer to pointer concept, one pointer refers to the address of another pointer. The pointer to pointer is a chain of pointers. Generally, 
+the pointer contains the address of a variable. The pointer to pointer contains the address of a first pointer. Let's understand this concept through an example:
 
 #include <stdio.h>  
  int main()  
